@@ -1,14 +1,24 @@
-import Button from './components/button/Button';
+import { BrowserRouter, Link } from 'react-router-dom';
+import Router from './router/Router';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const App = () => {
 	return (
-		<div>
+		<BrowserRouter>
 			<GlobalStyles />
-			<h1>Curso de React</h1>
-			<Button color='steelblue'>Click Me!</Button>
-			<Button color='#f0f'>Click Me!</Button>
-		</div>
+			<nav>
+				<ul>
+					<Link to='/'>Home</Link>
+				</ul>
+				<ul>
+					<Link to='/about'>About</Link>
+				</ul>
+			</nav>
+			<button>One</button>
+			<button>Two</button>
+			<button>Three</button>
+			<Router />
+		</BrowserRouter>
 	);
 };
 
